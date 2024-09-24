@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B10 Assignment 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <div class="navbar bg-base-200 max-w-full mx-auto sticky">
+        <div class="navbar-start">
+          <a class="btn btn-ghost lg:ml-20 lg:px-10 text-xl px-6 bg-lime-400">Blog</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 -ml-36">
+           
+            <li class="font-semibold text-xl"><a><img class=" h-8" src="assets/logo.png" alt="">Donate Bangladesh</a></li>
+          </ul>
+        </div>
+        <div class="ml-10 lg:ml-56">
+          <!-- calculate btn -->
+          <img src="assets/coin.png" alt="" class="ml-6 lg:ml-36">
+          <button class="ml-2" id="button1"></button><a class="btn"></a></button>  
+        </div>
+      </div>
+      <!-- banner section -->
+      <section class="lg:ml-96 sticky">
+            <div class="mt-7 ml-24 sm:flex">
+              <a class="btn bg-lime-300 ml-4 px-10">Donation</a>
+              <a class="btn hover:bg-lime-100 ml-4 px-10">History</a>
+            </div>
+      </section>
+      <!-- card Section -->
+      <section class="w-[80rem] lg:ml-40">
+        <div class="card card-compact lg:ml-20 lg:flex lg:flex-row lg:w-[950px] bg-base-100 w-[700px] shadow-xl">
+            <img class="w-[27rem] lg:h-[18rem] ml-7 mt-10"
+              src="assets/noakhali.png" alt="flood"/>
     
+          <div class="card-body ml-4">
+            <div class="mt-6 flex flex-row">
+              <!-- calculate btn -->
+              <img src="assets/coin.png" class="" alt="">
+              <button id="button2" class="ml-2"><a class="btn  border-gray-300 bg-white">0</a></button>
+            </div> 
+             <div> 
+              <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+               <p class="w-[27rem]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+               </p>
+               <!-- calculate btn -->
+               <input id="inputAmount" class="border border-black-300 w-96 px-4 mt-4 py-2 rounded-md" type="number" placeholder="Write Donation Amount">
+              </div>
+            <div class="card-actions justify-between">
+              <button id="button3" class="btn bg-lime-400 w-96">Donate Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="./js/index.js"></script>
 </body>
 </html>
