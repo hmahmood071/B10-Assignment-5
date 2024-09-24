@@ -6,9 +6,20 @@
     <title>B10 Assignment 5</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    #nav{
+    background-color: #333;  
+    color: white;  
+    padding: 10px 0;  
+    position: sticky;  
+    top: 0;            
+    width: 100%;     
+    z-index: 1000;
+    }
+</style>
 </head>
 <body>
-    <div class="navbar bg-base-200 max-w-full mx-auto sticky">
+    <div id="nav" class="navbar bg-base-200 max-w-full mx-auto">
         <div class="navbar-start">
           <button id="button6" class="btn btn-ghost ml-2 lg:ml-20 lg:px-10 text-xl px-6 bg-lime-400" onclick="window.location.href='blog.html'">Blog</button>
         </div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B10 Assignment 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    #nav{
+        background-color: #333;  
+    color: white;  
+    padding: 10px 0;  
+    position: sticky;  
+    top: 0;            
+    width: 100%;     
+    z-index: 1000;
+    }
+</style>
+</head>
+<body>
+    <div id="nav" class="navbar bg-base-200 max-w-full mx-auto">
+        <div class="navbar-start">
+          <button id="button6" class="btn btn-ghost ml-2 lg:ml-20 lg:px-10 text-xl px-6 bg-lime-400" onclick="window.location.href='index.html'">Home</button>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 -ml-36">
+           
+            <li class="font-semibold text-xl"><a><img class=" h-8" src="assets/logo.png" alt="">Donate Bangladesh</a></li>
+          </ul>
+        </div>
+        <div class="ml-10 lg:ml-56">
+          <!-- calculate btn -->
+          <img src="assets/coin.png" alt="" class="ml-10 lg:ml-36">
+          <button id="button1" class="ml-2"><a class="btn">BDT <span id="amount1">0</span></a></button> 
+        </div>
+      </div>
+      <section>
+        <div>
+            <h1 class="m-12 font-bold text-2xl">Important FAQ</h1>
+        </div>
+        <hr>
+        <div>
+            <h3 class="font-semibold ml-10 mt-5">
+                What is the Document Object Model (DOM) ?
+            </h3>
+            <p class="ml-10">
+                Ans: The DOM is a standard maintained by the World Wide Web Consortium and is widely supported by all modern web browsers.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h3 class="font-semibold ml-10 mt-5">
+                How do you select an element from the DOM ?
+            </h3>
+            <p class="ml-10">
+                Ans: To select an element from the DOM using JavaScript, I can use several different methods. example: getElementById
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h3 class="font-semibold ml-10 mt-5">
+                What is event delegation in the context of the DOM, and why is it useful?
+            </h3>
+            <p class="ml-10">
+                Ans:Event delegation is a powerful method in JavaScript for handling events in the DOM by utilizing the concept of event bubbling. Instead of attaching event listeners to individual child elements. 
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h3 class="font-semibold ml-10 mt-5">
+               How do you manipulate an element's attributes and styles using the DOM?
+            </h3>
+            <p class="ml-10">
+                Ans:I can manipulate an element's attributes and styles using the Document Object Model (DOM) with JavaScript. 
+            </p>
+        </div>
+      </section>
+</body>
+</html>
