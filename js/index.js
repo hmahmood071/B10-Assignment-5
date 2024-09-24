@@ -1,35 +1,39 @@
-let totalAmount =5500;
-let totalDonated =0;
+        let amountDeposited = 0;  
+        let fundAmount = 0;  
+        let donationHistory = [];  
+  
+        function updateDisplay() {  
+            document.getElementById('amount1').innerText = amountDeposited;  
+            document.getElementById('amount2').innerText = fundAmount;  
+        }  
+ 
+        document.getElementById('button3').onclick = function () {  
+            const inputAmount = parseFloat(document.getElementById('inputAmount').value);  
+            
+            if (isNaN(inputAmount) || inputAmount <= 0 || inputAmount > amountDeposited) {  
+                alert("Please enter a valid positive amount not exceeding the deposited amount!");  
+                return;  
+            }  
 
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
-const inputAmount = document.getElementById('inputAmount');
+            amountDeposited -= inputAmount;  
+            fundAmount += inputAmount;  
+  
+            const currentDate = new Date();  
+            donationHistory.push(`Donated: BDT ${inputAmount} at ${currentDate.toLocaleString()}`);  
 
-function updateDisplays() {
-   button1.textContent =`${totalAmount} BDT`;
-   button2.textContent =`${totalDonated} BDT`;
-}
-
-
-document.getElementById('button3').addEventListener('click', ()=>{
-   const donationAmount = parseFloat(inputAmount.value);
-
-   if(isNaN(donationAmount) || donationAmount <=0) {
-      alert('Please enter a valid positive amount');
-      return;
-   }
-
-   if(donationAmount > totalAmount){
-      alert('You check your available money');
-      return;
-   }
-
-   totalAmount -= donationAmount;
-   totalDonated += donationAmount;
-
-   updateDisplays();
-
-   inputAmount.value = '';
-});
-
-   updateDisplays();
+            document.getElementById('inputAmount').value = '';  
+  
+            updateDisplay();  
+        };  
+  
+        document.getElementById('button4').onclick = function () {  
+            const historyDiv = document.getElementById('history');  
+            historyDiv.innerHTML = "<h3>Donate for Flood at Noakhali, Bangladesh</h3>";  
+            donationHistory.forEach(entry => {  
+                const p = document.createElement('p');  
+                p.innerText = entry;  
+                historyDiv.appendChild(p);  
+            });  
+        };    
+        amountDeposited = 6500;   
+        updateDisplay(); 
