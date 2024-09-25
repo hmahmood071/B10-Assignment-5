@@ -75,10 +75,9 @@
             inputAmount1.value = '';  
         });  
         
-        inputBtn2.addEventListener('click', () => {  
+        inputBtn.addEventListener('click', () => {  
             const inputTaka = parseInt(inputAmount2.value);  
           
-           
             if (isNaN(inputTaka) || inputTaka <= 0) {  
                 alert("Please enter a positive amount.");  
                 return;  
@@ -88,12 +87,10 @@
                 return;  
             }  
         
-            
             depositAmount -= inputTaka;  
             fundAmount += inputTaka;  
             historyLog.push(`Input: ${inputTaka} Tk at ${new Date().toLocaleString('en-US', { timeZone: 'GMT' })}`);  
         
-             
             updateDisplay();  
             inputAmount2.value = '';  
         });  
